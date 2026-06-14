@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abduxalikov Djamshid Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- NAV -->
+<header class="fixed w-full z-50 glass">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-green-400 font-bold text-xl">Abduxalikov Djamshid</h1>
+
+    <nav id="nav" class="hidden md:flex gap-6 text-sm">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-green-400">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden flex-col p-4 md:hidden">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center hero">
+  <div>
+    <h1 class="text-4xl md:text-6xl font-bold glow">
+      4 Years of Creativity, Design & Digital Innovation
+    </h1>
+    <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+      Portfolio showcasing Video Production, UI/UX Design, 3D Modeling, Game Design, Photography, and Computer Graphics.
+    </p>
+
+    <div class="mt-6 flex gap-4 justify-center">
+      <a href="#portfolio" class="btn">View Portfolio</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="title">About Me</h2>
+  <p class="text-gray-300 max-w-3xl mx-auto text-center">
+   I studied at the Faculty of Multimedia from 2022 to 2026. During my studies, I gained knowledge and practical experience in graphic design, digital art, multimedia technologies, and creative projects.
+
+I also developed skills in creative thinking, teamwork, and working with modern digital tools and software. In the future, I aim to continue developing my career in the field of multimedia and digital art.
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="title">Education & Skills</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="card">
+      <h3>🎬 Video Shooting</h3>
+      <p>Saidov Azimjon</p>
+      <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>🎨 UI/UX Design</h3>
+      <p>Ibroximov Muzaffar</p>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>🧊 3D Modeling</h3>
+      <p>Jang Taihwa</p>
+      <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>🎮 Game Design</h3>
+      <p>Shavkat Khahhorov</p>
+      <div class="progress"><div style="width:75%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>📸 Photography</h3>
+      <p>Saidov Azimjon</p>
+      <div class="progress"><div style="width:88%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>🖥 2D Graphics</h3>
+      <p>Jang Taihwa</p>
+      <div class="progress"><div style="width:82%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h2 class="title">Portfolio Projects</h2>
+
+  <div class="flex justify-center gap-3 flex-wrap mb-6">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="video">Video shooting</button>
+    <button class="filter" data-filter="ui">UI/UX</button>
+    <button class="filter" data-filter="3d">3D</button>
+    <button class="filter" data-filter="game">Game</button>
+    <button class="filter" data-filter="photo">Photo shooting</button>
+  </div>
+
+  <div id="grid" class="grid md:grid-cols-3 gap-4">
+
+<div class="project video" onclick="openModal('rasmlar/4444.jpg')">
+    Video Project
+</div>
+
+<div class="project ui" onclick="openModal('rasmlar/1111.png')">
+    UI Design
+</div>
+
+<div class="project model3d" onclick="openModal('rasmlar/5555.jpg')">
+    3D Model
+</div>
+
+<div class="project game" onclick="openModal('rasmlar/6666.jpg')">
+    Game Design
+</div>
+
+<div class="project photo" onclick="openModal('rasmlar/2222.jpg')">
+    Photography
+</div>
+
+<div class="project ui" onclick="openModal('rasmlar/3333.jpg')">
+    App UI
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="">
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section">
+  <h2 class="title">4-Year Journey</h2>
+
+  <div class="timeline">
+    <div>Year 1 — Basics of design & editing</div>
+    <div>Year 2 — UI/UX & photography mastery</div>
+    <div>Year 3 — 3D & game design exploration</div>
+    <div>Year 4 — Professional portfolio production</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats">
+  <div class="grid md:grid-cols-4 gap-6 text-center">
+    <div><h3>4</h3><p>Years Experience</p></div>
+    <div><h3>6</h3><p>Disciplines</p></div>
+    <div><h3>15
+    +</h3><p>Projects</p></div>
+    <div><h3>400
+      +</h3><p>Hours</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="title">Contact Me</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <div class="card">
+      <p>📞 Phone: +998 998722262</p>
+      <p>✈ Telegram: @djamshid1984</p>
+      <p>📧 Email: djamshid@ @ @</p>
+      <p>📸 Instagram: DJ@1984</p>
+      <p>📍 Location: Tashkent</p>
+    </div>
+
+    <form class="card">
+      <input placeholder="Name" class="input"/>
+      <input placeholder="Email" class="input"/>
+      <textarea placeholder="Message" class="input"></textarea>
+      <button class="btn w-full mt-2">Send</button>
+    </form>
+
+  </div>
+</section>
+
+<footer class="text-center p-6 text-gray-500">
+  © 2026 Abduxalikov Djamshid. All rights reserved.
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="modalTitle"></h2>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
